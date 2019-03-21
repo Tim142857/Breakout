@@ -4,7 +4,8 @@ const path = require('path');
 
 app.use(express.static('build'))
 app.get('/play', (req, res) => {
-  res.sendFile(path.join(__dirname + '/build/index.html'))
+  const index = path.join(__dirname, 'build', 'index.html');
+  res.sendFile(index);
 })
 
 app.use('/login', (req, res) => {
