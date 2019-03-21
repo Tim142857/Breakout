@@ -3,13 +3,17 @@ var app = express()
 const path = require('path');
 
 app.use(express.static('build'))
-app.get('/play', (req, res) => {
+
+app.get('/', (req, res) => {
+  console.log('/')
   const index = path.join(__dirname, 'build', 'index.html');
   res.sendFile(index);
 })
 
-app.use('/login', (req, res) => {
-  res.send(true)
+app.get('/play', (req, res) => {
+  console.log('/play')
+  const index = path.join(__dirname, 'build', 'index.html');
+  res.sendFile(index);
 })
 
 let port = process.env.PORT || 3000;
