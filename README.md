@@ -9,4 +9,4 @@
 
 
 Demo link:
- - https://github.com/lean/phaser-es6-webpack/tree/phaser3
+ - https://classic-breakout.herokuapp.com/
